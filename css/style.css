@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  --main-font: "League Spartan", sans-serif;
+    /* bgs */
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background-keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    /* keys */
+    --key-background-1: hsl(225, 21%, 49%);
+    --key-shadow-1: hsl(224, 28%, 35%); 
+   --toggle: hsl(6, 63%, 50%);
+   --key-shadow-2: hsl(6, 70%, 34%);
+   --key-background-2: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+
+    /* text */
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--main-background);
+
+}
+.main{
+    font-family: var(--main-font);
+    max-width: 450px;
+    margin: auto;
+    padding: 16px;
+}
+
+.main__top{
+    display: flex;
+    justify-content: space-between;
+    color: var(--key-background-2);
+}
+.main__logo{
+    font-size: 2rem;
+}
+.main__themes{
+    display: flex;
+    gap: 1rem;
+}
+.theme-number{
+    display: flex;
+    justify-content: space-between;
+}
+.theme-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem; 
+    background-color: var(--toggle-background-keypad-background);   
+    padding: .2rem;
+    border-radius: 10px;
+}
+.theme-btn{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: none;
+    background-color:var(--toggle) ;
+}
+.theme-text{
+    display: flex;
+    align-items: end;
+}
+.main__display{
+    height: 100px;
+    padding: 16px;
+    margin: 1rem 0;
+   background-color: var(--screen-background);
+   border-radius: 8px;
+
+}
+.display-number{
+    text-align: right;
+    font-size: 53px;
+    color: var(--key-background-2);
+    overflow-y: auto;
+}
+.main__btns{
+    padding: 1rem;
+   background-color: var(--toggle-background-keypad-background);
+   border-radius: 8px;
+}
+.section-btns{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,55px);
+    grid-template-areas: 
+    "number-7 number-8 number-9 tecla-del"
+    "number-4 number-5 number-6 tecla-mais"
+    "number-1 number-2 number-3 tecla-menos"
+    "tecla-ponto number-0 tecla-divisao tecla-mult"
+    "tecla-reset tecla-reset tecla-igual tecla-igual";
+    gap: 1rem;
+
+}
+.btn{
+    font-family: var(--main-font);
+    font-size: 2rem;
+    background-color: var(--key-background-2);
+    color: var(--key-shadow-1);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 0 var(--key-shadow);
+}
+.btn:active {
+    transform: scale(0.93);
+    box-shadow: none;
+
+  }
+
+.number-1{
+    grid-area: number-1;
+}
+.number-2{
+    grid-area: number-2;
+}
+.number-3{
+    grid-area: number-3;
+}
+.number-4{
+    grid-area: number-4;
+}
+.number-5{
+    grid-area: number-5;
+}
+.number-6{
+    grid-area: number-6;
+}
+.number-7{
+    grid-area: number-7;
+}
+.number-8{
+    grid-area: number-8;
+}
+.number-9{
+    grid-area: number-9;
+}
+.number-0{
+    grid-area: number-0;
+}
+
+.tecla-del{
+    grid-area: tecla-del;
+    background-color: var(--key-background-1);
+    color: var(--key-background-2);
+    box-shadow: 0 4px 0 var(--key-shadow-1);
+}
+.tecla-mais{
+    grid-area: tecla-mais;
+}
+.tecla-menos{
+    grid-area: tecla-menos;
+}
+.tecla-mult{
+    grid-area: tecla-mult;
+}
+.tecla-divisao{
+    grid-area: tecla-divisao;
+}
+.tecla-ponto{
+    grid-area: tecla-ponto;
+}
+.tecla-reset{
+    grid-area:tecla-reset;
+    background-color: var(--key-background-1);
+    color: var(--key-background-2);
+    box-shadow: 0 4px 0 var(--key-shadow-1);
+}
+.tecla-igual{
+    grid-area: tecla-igual;
+    background-color: var(--toggle);
+    color: var(--key-background-2);
+    box-shadow: 0 4px 0 var(--key-shadow-2);
+}
