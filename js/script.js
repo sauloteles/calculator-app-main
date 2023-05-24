@@ -80,14 +80,21 @@ number0.addEventListener("click",()=>{
 })
 
 mais.addEventListener("click",()=>{
-    if(displayNumber.textContent != '0' && numbers.charAt(numbers.length-1) != '+' && numbers.charAt(numbers.length-1) != 'x'  ){
+    if(displayNumber.textContent != '0' && numbers.charAt(numbers.length-1) != '+' && numbers.charAt(numbers.length-1) != 'x' && numbers.charAt(numbers.length-1) != '/' ){
         numbers += '+';
         displayNumber.textContent = numbers;
     }
 })
 mult.addEventListener("click",()=>{
-    if(displayNumber.textContent != '0' && numbers.charAt(numbers.length-1) != '+' && numbers.charAt(numbers.length-1) != 'x' ){
+    if(displayNumber.textContent != '0' && numbers.charAt(numbers.length-1) != '+' && numbers.charAt(numbers.length-1) != 'x' && numbers.charAt(numbers.length-1) != '/'){
         numbers += 'x';
+        displayNumber.textContent = numbers;
+        
+    }
+})
+divisao.addEventListener("click",()=>{
+    if(displayNumber.textContent != '0' && numbers.charAt(numbers.length-1) != '+' && numbers.charAt(numbers.length-1) != 'x' && numbers.charAt(numbers.length-1) != '/' ){
+        numbers += '/';
         displayNumber.textContent = numbers;
         
     }
